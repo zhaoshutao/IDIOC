@@ -1,0 +1,638 @@
+####PLC2IOC####
+#Gap Position&Velocity
+record(ai,"IDName:CurrentGapPosition")
+{
+	field(DESC,"GapPosition")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.UserMode.UserGapPositionDisplay")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:CurrentGapVelocity")
+{
+	field(DESC,"GapVelocity")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.UserMode.UserGapVelocityDisplay")
+	field(SCAN,"I/O Intr")
+}
+#4-axis Position&Velocity
+record(ai,"IDName:Pos_EntranceTopLin")
+{
+	field(DESC,"EntranceTopPosition")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Pos_LeftTopLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Velo_EntranceTopLin")
+{
+	field(DESC,"EntranceTopVelocity")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Velo_LeftTopLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Pos_ExitTopLin")
+{
+	field(DESC,"ExitTopPosition")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Pos_RightTopLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Velo_ExitTopLin")
+{
+	field(DESC,"ExitTopVelocity")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Velo_RightTopLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Pos_EntranceBottomLin")
+{
+	field(DESC,"EntranceBottomPosition")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Pos_LeftBottomLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Velo_EntranceBottomLin")
+{
+	field(DESC,"EntranceBottomVelocity")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Velo_LeftBottomLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Pos_ExitBottomLin")
+{
+	field(DESC,"ExitBottomPosition")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Pos_RightBottomLin")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:Velo_ExitBottomLin")
+{
+	field(DESC,"ExitBottomVelocity")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Velo_RightBottomLin")
+	field(SCAN,"I/O Intr")
+}
+#8 LimitSwicth
+record(bi,"IDName:LS_EntranceTop_Far")
+{
+	field(DESC,"LimitSwitch_EntranceTopFarGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_LeftTop_Top")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_EntranceTop_Near")
+{
+	field(DESC,"LimitSwitch_EntranceTopNearGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_LeftTop_Bottom")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_ExitTop_Far")
+{
+	field(DESC,"LimitSwitch_ExitTopFarGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_RightTop_Top")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_ExitTop_Near")
+{
+	field(DESC,"LimitSwitch_ExitTopNearGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_RightTop_Bottom")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_EntranceBottom_Far")
+{
+	field(DESC,"LimitSwitch_EntranceBottomFarGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_LeftBottom_Top")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_EntranceBottom_Near")
+{
+	field(DESC,"LimitSwitch_EntranceBottomNearGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_LeftBottom_Bottom")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_ExitBottom_Far")
+{
+	field(DESC,"LimitSwitch_ExitBottomFarGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_RightBottom_Top")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:LS_ExitBottom_Near")
+{
+	field(DESC,"LimitSwitch_ExitBottomNearGap")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.LS_RightBottom_Bottom")
+	field(SCAN,"I/O Intr")
+}
+#####Status#####
+record(bi,"IDName:st_Power")
+{
+	field(DESC,"st_Power")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.st_Power")
+	field(SCAN,"I/O Intr")
+}
+record(stringin,"IDName:InsertionDeviceName")
+{
+	field(DESC,"InsertionDeviceName")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.InsertionDeviceName")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:IDControlReady")
+{
+	field(DESC,"IDControlReady")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.IDControlReady")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:Hardware_EmergencyStop")
+{
+	field(DESC,"Hardware_EmergencyStop")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Hardware_EmergencyStop")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:Error")
+{
+	field(DESC,"Error")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.Error")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:ErrorID")
+{
+	field(DESC,"ErrorID")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.ErrorID")
+	field(SCAN,"I/O Intr")
+}
+record(stringin,"IDName:ErrorDescription")
+{
+	field(DESC,"ErrorDescription")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.ErrorDescription")
+	field(SCAN,"I/O Intr")
+}
+
+record(ai,"IDName:UserTaperPositionDisplay")
+{
+	field(DESC,"UserTaperPositionDisplay")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.UserMode.UserTaperPositionDisplay")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:UserTaperVelocityDisplay")
+{
+	field(DESC,"UserTaperVelocityDisplay")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.UserMode.UserTaperVelocityDisplay")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftTop_Far_Contact2")
+{
+	field(DESC,"KS_LeftTop_Far_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftTop_Far_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftTop_Far_Contact1")
+{
+	field(DESC,"KS_LeftTop_Far_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftTop_Far_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftTop_Near_Contact1")
+{
+	field(DESC,"KS_LeftTop_Near_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftTop_Near_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftTop_Near_Contact2")
+{
+	field(DESC,"KS_LeftTop_Near_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftTop_Near_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftBottom_Near_Contact2")
+{
+	field(DESC,"KS_LeftBottom_Near_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftBottom_Near_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftBottom_Near_Contact1")
+{
+	field(DESC,"KS_LeftBottom_Near_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftBottom_Near_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftBottom_Far_Contact1")
+{
+	field(DESC,"KS_LeftBottom_Far_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftBottom_Far_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_LeftBottom_Far_Contact2")
+{
+	field(DESC,"KS_LeftBottom_Far_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_LeftBottom_Far_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightTop_Far_Contact2")
+{
+	field(DESC,"KS_RightTop_Far_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightTop_Far_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightTop_Far_Contact1")
+{
+	field(DESC,"KS_RightTop_Far_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightTop_Far_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightTop_Near_Contact1")
+{
+	field(DESC,"KS_RightTop_Near_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightTop_Near_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightTop_Near_Contact2")
+{
+	field(DESC,"KS_RightTop_Near_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightTop_Near_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightBottom_Near_Contact2")
+{
+	field(DESC,"KS_RightBottom_Near_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightBottom_Near_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightBottom_Near_Contact1")
+{
+	field(DESC,"KS_RightBottom_Near_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightBottom_Near_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightBottom_Far_Contact2")
+{
+	field(DESC,"KS_RightBottom_Far_Contact2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightBottom_Far_Contact2")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_RightBottom_Far_Contact1")
+{
+	field(DESC,"KS_RightBottom_Far_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_RightBottom_Far_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_CabinetEmergency_contact1")
+{
+	field(DESC,"KS_CabinetEmergency_contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_CabinetEmergency_contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_handEmergency1_Contact1")
+{
+	field(DESC,"KS_handEmergency1_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_handEmergency1_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:KS_handEmergency2_Contact1")
+{
+	field(DESC,"KS_handEmergency2_Contact1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.Global_Variables.KS_handEmergency2_Contact1")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:FB_ERROR")
+{
+	field(DESC,"FB_ERROR")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.FB_ERROR")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:COM_ERROR")
+{
+	field(DESC,"COM_ERROR")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.COM_ERROR")
+	field(SCAN,"I/O Intr")
+}
+record(bi,"IDName:SafePLCRunOK")
+{
+	field(DESC,"SafePLCRunOK")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.SafePLCRunOK")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_1")
+{
+	field(DESC,"TemperatureSensors_1")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_1")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_2")
+{
+	field(DESC,"TemperatureSensors_2")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_2")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_3")
+{
+	field(DESC,"TemperatureSensors_3")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_3")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_4")
+{
+	field(DESC,"TemperatureSensors_4")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_4")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_5")
+{
+	field(DESC,"TemperatureSensors_5")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_5")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_6")
+{
+	field(DESC,"TemperatureSensors_6")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_6")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_7")
+{
+	field(DESC,"TemperatureSensors_7")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_7")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:TemperatureSensors_8")
+{
+	field(DESC,"TemperatureSensors_8")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.TemperatureSensors_8")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:temperature_average")
+{
+	field(DESC,"temperature_average")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.temperature_average")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:temperature_gradient_max")
+{
+	field(DESC,"temperature_gradient_max")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.temperature_gradient_max")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:DriveDiagNumber_LeftTop")
+{
+	field(DESC,"DriveDiagNumber_LeftTop")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagNumber_LeftTop")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:DriveDiagNumber_RightTop")
+{
+	field(DESC,"DriveDiagNumber_RightTop")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagNumber_RightTop")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:DriveDiagNumber_LeftBottom")
+{
+	field(DESC,"DriveDiagNumber_LeftBottom")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagNumber_LeftBottom")
+	field(SCAN,"I/O Intr")
+}
+record(ai,"IDName:DriveDiagNumber_RightBottom")
+{
+	field(DESC,"DriveDiagNumber_RightBottom")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagNumber_RightBottom")
+	field(SCAN,"I/O Intr")
+}
+record(stringin,"IDName:DriveDiagMessage_LeftTop")
+{
+	field(DESC,"DriveDiagMessage_LeftTop")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagMessage_LeftTop")
+	field(SCAN,"I/O Intr")
+}
+record(stringin,"IDName:DriveDiagMessage_RightTop")
+{
+	field(DESC,"DriveDiagMessage_RightTop")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagMessage_RightTop")
+	field(SCAN,"I/O Intr")
+}
+record(stringin,"IDName:DriveDiagMessage_LeftBottom")
+{
+	field(DESC,"DriveDiagMessage_LeftBottom")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagMessage_LeftBottom")
+	field(SCAN,"I/O Intr")
+}
+record(stringin,"IDName:DriveDiagMessage_RightBottom")
+{
+	field(DESC,"DriveDiagMessage_RightBottom")
+	field(DTYP,"opc")
+	field(INP,"1 Plc1.MAIN.DriveDiagMessage_RightBottom")
+	field(SCAN,"I/O Intr")
+}
+
+
+###################################################
+#############################IOC2PLC###########################################################################
+#Power
+record(bo,"IDName:Power")
+{
+	field(DESC,"Power on or off")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.btn_Power")
+	field(SCAN,"I/O Intr")
+}
+#Gap Move&Stop
+record(bo,"IDName:GapMove")
+{
+	field(DESC,"gap move")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.btn_UserGapMove")
+	field(SCAN,"I/O Intr")
+}
+record(bo,"IDName:GapStop")
+{
+	field(DESC,"gap stop")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.btn_UserGapStop")
+	field(SCAN,"I/O Intr")
+}
+#target position&velocity
+record(ao,"IDName:TargetGapPosition")
+{
+	field(DESC,"GapTargetPosition")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.UserGapPositionNew")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:TargetGapVelocity")
+{
+	field(DESC,"GapTargetVelocity")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.UserGapVelocityNew")
+	field(SCAN,"I/O Intr")
+}
+#restart TwinCAT
+record(bo,"IDName:RestartTwinCAT")
+{
+	field(DESC,"RestartTwinCAT")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.Global_Variables.m_restartTC")
+	field(SCAN,"I/O Intr")
+}
+#emergency
+record(bo,"IDName:Plc_EmergencyStop")
+{
+	field(DESC,"Plc_EmergencyStop")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.Global_Variables.Plc_EmergencyStop")
+	field(SCAN,"I/O Intr")
+}
+record(bo,"IDName:IsSSMotionMode")
+{
+	field(DESC,"IsSSMotionMode")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.IsSSMotionMode")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:SS_StepSize")
+{
+	field(DESC,"SS_StepSize")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.SS_StepSize")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:SS_StepNumber")
+{
+	field(DESC,"SS_StepNumber")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.SS_StepNumber")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:SS_StepVelocity")
+{
+	field(DESC,"SS_StepVelocity")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.SS_StepVelocity")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:StepEachTime_ms")
+{
+	field(DESC,"StepEachTime_ms")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.StepEachTime_ms")
+	field(SCAN,"I/O Intr")
+}
+record(bo,"IDName:SS_Move")
+{
+	field(DESC,"SS_Move")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.SS_Move")
+	field(SCAN,"I/O Intr")
+}
+record(bo,"IDName:SS_Stop")
+{
+	field(DESC,"SS_Stop")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.SS_Stop")
+	field(SCAN,"I/O Intr")
+}
+record(bo,"IDName:TaperOrNot")
+{
+	field(DESC,"TaperOrNot")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.Global_Variables.TaperOrNot")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:UserTaperPositionNew")
+{
+	field(DESC,"UserTaperPositionNew")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.UserTaperPositionNew")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:UserTaperVelocityNew")
+{
+	field(DESC,"UserTaperVelocityNew")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.UserMode.UserTaperVelocityNew")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:ValueSet_LeftTop")
+{
+	field(DESC,"ValueSet_LeftTop")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.MAIN.ValueSet_LeftTop")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:ValueSet_RightTop")
+{
+	field(DESC,"ValueSet_RightTop")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.MAIN.ValueSet_RightTop")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:ValueSet_LeftBottom")
+{
+	field(DESC,"ValueSet_LeftBottom")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.MAIN.ValueSet_LeftBottom")
+	field(SCAN,"I/O Intr")
+}
+record(ao,"IDName:ValueSet_RightBottom")
+{
+	field(DESC,"ValueSet_RightBottom")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.MAIN.ValueSet_RightBottom")
+	field(SCAN,"I/O Intr")
+}
+record(bo,"IDName:btn_setAxisPosition")
+{
+	field(DESC,"btn_setAxisPosition")
+	field(DTYP,"opc")
+	field(OUT,"1 Plc1.MAIN.btn_setAxisPosition")
+	field(SCAN,"I/O Intr")
+}

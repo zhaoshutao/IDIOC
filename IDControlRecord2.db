@@ -1,0 +1,33 @@
+#PLC2IOC
+record(bi,"Test:bi")
+{
+	field(DESC,"Testbi")
+	field(DTYP,"opc")
+	field(INP,"2 PLC1|MAIN.OPC_TEST_Bi")
+	field(SCAN,"I/O Intr")
+	# TSE=0  => EPICSTIME=SYSTEMTIME
+	# TSE=-2 => EPICSTIME=OPC-SERVER-TIME
+       	#field(TSE,"-2")
+	#PINI=0 UDF INVALID until OPC server updates value
+	#PINI=1 value will be read and UDF gets VALID
+        	#field(PINI,"1")
+}
+record(bi,"IDName:LS_LeftTop_Top")
+{
+	field(DESC,"LS_LeftTop_Top")
+	field(DTYP,"opc")
+	field(INP,"2 PLC1|Global_Variables.LS_LeftTop_Top")
+	field(SCAN,"I/O Intr")
+       	#field(TSE,"-2")
+        	#field(PINI,"1")
+}
+#IOC2PLC
+record(bo,"IDName:m_restartTC")
+{
+	field(DESC,"m_restartTC")
+	field(DTYP,"opc")
+	field(OUT,"2 PLC1|Global_Variables.m_restartTC")
+	#field(SCAN,"I/O Intr")
+	#field(TSE,"-2")
+	#field(PINI,"1")
+#}
