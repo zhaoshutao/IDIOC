@@ -1,0 +1,4 @@
+file "C:\HZB\OpcIocShell\IDControlIOC\db\in.template"{pattern
+{	P,		R,			PLC					}
+{SR:Rnn:ID:IDName:,	CurrentGapPosition,	1 Plc1.UserMode.UserGapPositionDisplay	}
+}

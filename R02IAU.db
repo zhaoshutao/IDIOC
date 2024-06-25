@@ -1,13 +1,13 @@
 ####PLC2IOC####
 #Gap Position&Velocity
-record(ai,"SR:Rnn:ID:IDName:CurrentGapPosition")
+record(ai,"SR:R02:ID:R02IAU:CurrentGapPosition")
 {
 	field(DESC,"GapPosition")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.UserMode.UserGapPositionDisplay")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:CurrentGapVelocity")
+record(ai,"SR:R02:ID:R02IAU:CurrentGapVelocity")
 {
 	field(DESC,"GapVelocity")
 	field(DTYP,"opc")
@@ -15,56 +15,56 @@ record(ai,"SR:Rnn:ID:IDName:CurrentGapVelocity")
 	field(SCAN,"I/O Intr")
 }
 #4-axis Position&Velocity
-record(ai,"SR:Rnn:ID:IDName:Pos_EntranceTopLin")
+record(ai,"SR:R02:ID:R02IAU:Pos_EntranceTopLin")
 {
 	field(DESC,"EntranceTopPosition")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Pos_LeftTopLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Velo_EntranceTopLin")
+record(ai,"SR:R02:ID:R02IAU:Velo_EntranceTopLin")
 {
 	field(DESC,"EntranceTopVelocity")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Velo_LeftTopLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Pos_ExitTopLin")
+record(ai,"SR:R02:ID:R02IAU:Pos_ExitTopLin")
 {
 	field(DESC,"ExitTopPosition")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Pos_RightTopLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Velo_ExitTopLin")
+record(ai,"SR:R02:ID:R02IAU:Velo_ExitTopLin")
 {
 	field(DESC,"ExitTopVelocity")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Velo_RightTopLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Pos_EntranceBottomLin")
+record(ai,"SR:R02:ID:R02IAU:Pos_EntranceBottomLin")
 {
 	field(DESC,"EntranceBottomPosition")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Pos_LeftBottomLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Velo_EntranceBottomLin")
+record(ai,"SR:R02:ID:R02IAU:Velo_EntranceBottomLin")
 {
 	field(DESC,"EntranceBottomVelocity")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Velo_LeftBottomLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Pos_ExitBottomLin")
+record(ai,"SR:R02:ID:R02IAU:Pos_ExitBottomLin")
 {
 	field(DESC,"ExitBottomPosition")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.Global_Variables.Pos_RightBottomLin")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:Velo_ExitBottomLin")
+record(ai,"SR:R02:ID:R02IAU:Velo_ExitBottomLin")
 {
 	field(DESC,"ExitBottomVelocity")
 	field(DTYP,"opc")
@@ -72,56 +72,56 @@ record(ai,"SR:Rnn:ID:IDName:Velo_ExitBottomLin")
 	field(SCAN,"I/O Intr")
 }
 #8 LimitSwicth
-record(bi,"SR:Rnn:ID:IDName:LS_EntranceTop_Far")
+record(bi,"SR:R02:ID:R02IAU:LS_EntranceTop_Far")
 {
 	field(DESC,"LimitSwitch_EntranceTopFarGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_LeftTop_Far")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_EntranceTop_Near")
+record(bi,"SR:R02:ID:R02IAU:LS_EntranceTop_Near")
 {
 	field(DESC,"LimitSwitch_EntranceTopNearGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_LeftTop_Near")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_ExitTop_Far")
+record(bi,"SR:R02:ID:R02IAU:LS_ExitTop_Far")
 {
 	field(DESC,"LimitSwitch_ExitTopFarGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_RightTop_Far")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_ExitTop_Near")
+record(bi,"SR:R02:ID:R02IAU:LS_ExitTop_Near")
 {
 	field(DESC,"LimitSwitch_ExitTopNearGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_RightTop_Near")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_EntranceBottom_Far")
+record(bi,"SR:R02:ID:R02IAU:LS_EntranceBottom_Far")
 {
 	field(DESC,"LimitSwitch_EntranceBottomFarGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_LeftBottom_Far")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_EntranceBottom_Near")
+record(bi,"SR:R02:ID:R02IAU:LS_EntranceBottom_Near")
 {
 	field(DESC,"LimitSwitch_EntranceBottomNearGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_LeftBottom_Near")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_ExitBottom_Far")
+record(bi,"SR:R02:ID:R02IAU:LS_ExitBottom_Far")
 {
 	field(DESC,"LimitSwitch_ExitBottomFarGap")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.LS_RightBottom_Far")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:LS_ExitBottom_Near")
+record(bi,"SR:R02:ID:R02IAU:LS_ExitBottom_Near")
 {
 	field(DESC,"LimitSwitch_ExitBottomNearGap")
 	field(DTYP,"opc")
@@ -129,112 +129,112 @@ record(bi,"SR:Rnn:ID:IDName:LS_ExitBottom_Near")
 	field(SCAN,"I/O Intr")
 }
 #8 KillSwicth
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceTop_Far_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceTop_Far_Contact2")
 {
 	field(DESC,"KS_EntranceTop_Far_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftTop_Far_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceTop_Far_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceTop_Far_Contact1")
 {
 	field(DESC,"KS_EntranceTop_Far_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftTop_Far_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceTop_Near_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceTop_Near_Contact1")
 {
 	field(DESC,"KS_EntranceTop_Near_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftTop_Near_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceTop_Near_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceTop_Near_Contact2")
 {
 	field(DESC,"KS_EntranceTop_Near_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftTop_Near_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceBottom_Near_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceBottom_Near_Contact2")
 {
 	field(DESC,"KS_EntranceBottom_Near_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftBottom_Near_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceBottom_Near_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceBottom_Near_Contact1")
 {
 	field(DESC,"KS_EntranceBottom_Near_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftBottom_Near_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceBottom_Far_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceBottom_Far_Contact1")
 {
 	field(DESC,"KS_EntranceBottom_Far_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftBottom_Far_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_EntranceBottom_Far_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_EntranceBottom_Far_Contact2")
 {
 	field(DESC,"KS_EntranceBottom_Far_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_LeftBottom_Far_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitTop_Far_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitTop_Far_Contact2")
 {
 	field(DESC,"KS_ExitTop_Far_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightTop_Far_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitTop_Far_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitTop_Far_Contact1")
 {
 	field(DESC,"KS_ExitTop_Far_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightTop_Far_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitTop_Near_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitTop_Near_Contact1")
 {
 	field(DESC,"KS_ExitTop_Near_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightTop_Near_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitTop_Near_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitTop_Near_Contact2")
 {
 	field(DESC,"KS_ExitTop_Near_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightTop_Near_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitBottom_Near_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitBottom_Near_Contact2")
 {
 	field(DESC,"KS_ExitBottom_Near_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightBottom_Near_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitBottom_Near_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitBottom_Near_Contact1")
 {
 	field(DESC,"KS_ExitBottom_Near_Contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightBottom_Near_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitBottom_Far_Contact2")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitBottom_Far_Contact2")
 {
 	field(DESC,"KS_ExitBottom_Far_Contact2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_RightBottom_Far_Contact2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_ExitBottom_Far_Contact1")
+record(bi,"SR:R02:ID:R02IAU:KS_ExitBottom_Far_Contact1")
 {
 	field(DESC,"KS_ExitBottom_Far_Contact1")
 	field(DTYP,"opc")
@@ -242,49 +242,49 @@ record(bi,"SR:Rnn:ID:IDName:KS_ExitBottom_Far_Contact1")
 	field(SCAN,"I/O Intr")
 }
 #####Status#####
-record(bi,"SR:Rnn:ID:IDName:st_Power")
+record(bi,"SR:R02:ID:R02IAU:st_Power")
 {
 	field(DESC,"st_Power")
 	field(DTYP,"opc")
 	field(INP,"2 Plc1.Global_Variables.st_Power")
 	field(SCAN,"I/O Intr")
 }
-record(stringin,"SR:Rnn:ID:IDName:InsertionDeviceName")
+record(stringin,"SR:R02:ID:R02IAU:InsertionDeviceName")
 {
 	field(DESC,"InsertionDeviceName")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.InsertionDeviceName")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:IDControlReady")
+record(bi,"SR:R02:ID:R02IAU:IDControlReady")
 {
 	field(DESC,"IDControlReady")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.IDControlReady")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Hardware_EmergencyStop")
+record(bi,"SR:R02:ID:R02IAU:Hardware_EmergencyStop")
 {
 	field(DESC,"Hardware_EmergencyStop")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.Hardware_EmergencyStop")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Error")
+record(bi,"SR:R02:ID:R02IAU:Error")
 {
 	field(DESC,"Error")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.Error")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:ErrorID")
+record(ai,"SR:R02:ID:R02IAU:ErrorID")
 {
 	field(DESC,"ErrorID")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.ErrorID")
 	field(SCAN,"I/O Intr")
 }
-record(stringin,"SR:Rnn:ID:IDName:ErrorDescription")
+record(stringin,"SR:R02:ID:R02IAU:ErrorDescription")
 {
 	field(DESC,"ErrorDescription")
 	field(DTYP,"opc")
@@ -292,182 +292,182 @@ record(stringin,"SR:Rnn:ID:IDName:ErrorDescription")
 	field(SCAN,"I/O Intr")
 }
 
-record(ai,"SR:Rnn:ID:IDName:CurrentUserTaperPosition")
+record(ai,"SR:R02:ID:R02IAU:CurrentUserTaperPosition")
 {
 	field(DESC,"CurrentUserTaperPosition")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.UserMode.UserTaperPositionDisplay")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:CurrentUserTaperVelocity")
+record(ai,"SR:R02:ID:R02IAU:CurrentUserTaperVelocity")
 {
 	field(DESC,"CurrentUserTaperVelocity")
 	field(DTYP,"opc")
 	field(INP,"1 Plc1.UserMode.UserTaperVelocityDisplay")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_CabinetEmergency")
+record(bi,"SR:R02:ID:R02IAU:KS_CabinetEmergency")
 {
 	field(DESC,"KS_CabinetEmergency_contact1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_CabinetEmergency_contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_handEmergency1")
+record(bi,"SR:R02:ID:R02IAU:KS_handEmergency1")
 {
 	field(DESC,"KS_handEmergency1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_handEmergency1_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:KS_handEmergency2")
+record(bi,"SR:R02:ID:R02IAU:KS_handEmergency2")
 {
 	field(DESC,"KS_handEmergency2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.Global_Variables.KS_handEmergency2_Contact1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:FB_ERROR")
+record(bi,"SR:R02:ID:R02IAU:FB_ERROR")
 {
 	field(DESC,"FB_ERROR")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.FB_ERROR")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:COM_ERROR")
+record(bi,"SR:R02:ID:R02IAU:COM_ERROR")
 {
 	field(DESC,"COM_ERROR")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.COM_ERROR")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:SafePLCRunOK")
+record(bi,"SR:R02:ID:R02IAU:SafePLCRunOK")
 {
 	field(DESC,"SafePLCRunOK")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.SafePLCRunOK")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_1")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_1")
 {
 	field(DESC,"TemperatureSensors_1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_1")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_2")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_2")
 {
 	field(DESC,"TemperatureSensors_2")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_2")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_3")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_3")
 {
 	field(DESC,"TemperatureSensors_3")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_3")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_4")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_4")
 {
 	field(DESC,"TemperatureSensors_4")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_4")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_5")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_5")
 {
 	field(DESC,"TemperatureSensors_5")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_5")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_6")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_6")
 {
 	field(DESC,"TemperatureSensors_6")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_6")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_7")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_7")
 {
 	field(DESC,"TemperatureSensors_7")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_7")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:TemperatureSensors_8")
+record(ai,"SR:R02:ID:R02IAU:TemperatureSensors_8")
 {
 	field(DESC,"TemperatureSensors_8")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.TemperatureSensors_8")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:temperature_average")
+record(ai,"SR:R02:ID:R02IAU:temperature_average")
 {
 	field(DESC,"temperature_average")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.temperature_average")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:temperature_gradient_max")
+record(ai,"SR:R02:ID:R02IAU:temperature_gradient_max")
 {
 	field(DESC,"temperature_gradient_max")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.temperature_gradient_max")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:DriveDiagNumber_EntranceTop")
+record(ai,"SR:R02:ID:R02IAU:DriveDiagNumber_EntranceTop")
 {
 	field(DESC,"DriveDiagNumber_EntranceTop")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagNumber_LeftTop")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:DriveDiagNumber_ExitTop")
+record(ai,"SR:R02:ID:R02IAU:DriveDiagNumber_ExitTop")
 {
 	field(DESC,"DriveDiagNumber_ExitTop")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagNumber_RightTop")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:DriveDiagNumber_EntranceBottom")
+record(ai,"SR:R02:ID:R02IAU:DriveDiagNumber_EntranceBottom")
 {
 	field(DESC,"DriveDiagNumber_EntranceBottom")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagNumber_LeftBottom")
 	field(SCAN,"I/O Intr")
 }
-record(ai,"SR:Rnn:ID:IDName:DriveDiagNumber_ExitBottom")
+record(ai,"SR:R02:ID:R02IAU:DriveDiagNumber_ExitBottom")
 {
 	field(DESC,"DriveDiagNumber_ExitBottom")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagNumber_RightBottom")
 	field(SCAN,"I/O Intr")
 }
-record(stringin,"SR:Rnn:ID:IDName:DriveDiagMessage_EntranceTop")
+record(stringin,"SR:R02:ID:R02IAU:DriveDiagMessage_EntranceTop")
 {
 	field(DESC,"DriveDiagMessage_EntranceTop")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagMessage_LeftTop")
 	field(SCAN,"I/O Intr")
 }
-record(stringin,"SR:Rnn:ID:IDName:DriveDiagMessage_ExitTop")
+record(stringin,"SR:R02:ID:R02IAU:DriveDiagMessage_ExitTop")
 {
 	field(DESC,"DriveDiagMessage_ExitTop")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagMessage_RightTop")
 	field(SCAN,"I/O Intr")
 }
-record(stringin,"SR:Rnn:ID:IDName:DriveDiagMessage_EntranceBottom")
+record(stringin,"SR:R02:ID:R02IAU:DriveDiagMessage_EntranceBottom")
 {
 	field(DESC,"DriveDiagMessage_EntranceBottom")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.MAIN.DriveDiagMessage_LeftBottom")
 	field(SCAN,"I/O Intr")
 }
-record(stringin,"SR:Rnn:ID:IDName:DriveDiagMessage_ExitBottom")
+record(stringin,"SR:R02:ID:R02IAU:DriveDiagMessage_ExitBottom")
 {
 	field(DESC,"DriveDiagMessage_ExitBottom")
 	field(DTYP,"opc")
@@ -475,42 +475,42 @@ record(stringin,"SR:Rnn:ID:IDName:DriveDiagMessage_ExitBottom")
 	field(SCAN,"I/O Intr")
 }
 #globalChainProtection
-record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_EPS_In1")
+record(bi,"SR:R02:ID:R02IAU:Global_ChainProtection_EPS_In1")
 {
 	field(DESC,"Global_ChainProtection_EPS_In1")
 	field(DTYP,"opc")
 	field(INP,"3 Plc1.UserMode.Global_ChainProtection_EPS_In")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_EPS_In2")
+record(bi,"SR:R02:ID:R02IAU:Global_ChainProtection_EPS_In2")
 {
 	field(DESC,"Global_ChainProtection_EPS_In2")
 	field(DTYP,"opc")
 	field(INP,"2 Plc1.UserMode.Global_ChainProtection_EPS_In2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_In1")
+record(bi,"SR:R02:ID:R02IAU:Global_ChainProtection_MPS_In1")
 {
 	field(DESC,"Global_ChainProtection_MPS_In1")
 	field(DTYP,"opc")
 	field(INP,"2 Plc1.UserMode.Global_ChainProtection_MPS_In1")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_In2")
+record(bi,"SR:R02:ID:R02IAU:Global_ChainProtection_MPS_In2")
 {
 	field(DESC,"Global_ChainProtection_MPS_In2")
 	field(DTYP,"opc")
 	field(INP,"2 Plc1.UserMode.Global_ChainProtection_MPS_In2")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_EPS_Done")
+record(bi,"SR:R02:ID:R02IAU:Global_ChainProtection_EPS_Done")
 {
 	field(DESC,"Global_ChainProtection_EPS_Done")
 	field(DTYP,"opc")
 	field(INP,"2 Plc1.UserMode.Global_ChainProtection_EPS_Done")
 	field(SCAN,"I/O Intr")
 }
-record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_Done")
+record(bi,"SR:R02:ID:R02IAU:Global_ChainProtection_MPS_Done")
 {
 	field(DESC,"Global_ChainProtection_MPS_Done")
 	field(DTYP,"opc")
@@ -520,14 +520,14 @@ record(bi,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_Done")
 ###################################################
 #############################IOC2PLC###########################################################################
 #Mode
-record(bo,"SR:Rnn:ID:IDName:pbUserMode")
+record(bo,"SR:R02:ID:R02IAU:pbUserMode")
 {
 	field(DESC,"pbUserMode")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.MAIN.pbUserMode")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:pbDebugMode")
+record(bo,"SR:R02:ID:R02IAU:pbDebugMode")
 {
 	field(DESC,"pbDebugMode")
 	field(DTYP,"opc")
@@ -535,7 +535,7 @@ record(bo,"SR:Rnn:ID:IDName:pbDebugMode")
 	field(SCAN,"I/O Intr")
 }
 #Power
-record(bo,"SR:Rnn:ID:IDName:Power")
+record(bo,"SR:R02:ID:R02IAU:Power")
 {
 	field(DESC,"Power on or off")
 	field(DTYP,"opc")
@@ -543,14 +543,14 @@ record(bo,"SR:Rnn:ID:IDName:Power")
 	field(SCAN,"I/O Intr")
 }
 #Gap Move&Stop
-record(bo,"SR:Rnn:ID:IDName:GapMove")
+record(bo,"SR:R02:ID:R02IAU:GapMove")
 {
 	field(DESC,"gap move")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.UserMode.btn_UserGapMove")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:GapStop")
+record(bo,"SR:R02:ID:R02IAU:GapStop")
 {
 	field(DESC,"gap stop")
 	field(DTYP,"opc")
@@ -558,14 +558,14 @@ record(bo,"SR:Rnn:ID:IDName:GapStop")
 	field(SCAN,"I/O Intr")
 }
 #target position&velocity
-record(ao,"SR:Rnn:ID:IDName:TargetGapPosition")
+record(ao,"SR:R02:ID:R02IAU:TargetGapPosition")
 {
 	field(DESC,"GapTargetPosition")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.UserGapPositionNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetGapVelocity")
+record(ao,"SR:R02:ID:R02IAU:TargetGapVelocity")
 {
 	field(DESC,"GapTargetVelocity")
 	field(DTYP,"opc")
@@ -573,56 +573,56 @@ record(ao,"SR:Rnn:ID:IDName:TargetGapVelocity")
 	field(SCAN,"I/O Intr")
 }
 #target 4 axis position&velocity
-record(ao,"SR:Rnn:ID:IDName:TargetEntranceTopLinPosition")
+record(ao,"SR:R02:ID:R02IAU:TargetEntranceTopLinPosition")
 {
 	field(DESC,"TargetEntranceTopLinPosition")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.LeftTopLinPositionNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetEntranceTopLinVelocity")
+record(ao,"SR:R02:ID:R02IAU:TargetEntranceTopLinVelocity")
 {
 	field(DESC,"TargetEntranceTopLinVelocity")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.LeftTopLinVelocityNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetExitTopLinPosition")
+record(ao,"SR:R02:ID:R02IAU:TargetExitTopLinPosition")
 {
 	field(DESC,"TargetExitTopLinPosition")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.RightTopLinPositionNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetExitTopLinVelocity")
+record(ao,"SR:R02:ID:R02IAU:TargetExitTopLinVelocity")
 {
 	field(DESC,"TargetExitTopLinVelocity")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.RightTopLinVelocityNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetEntranceBottomLinPosition")
+record(ao,"SR:R02:ID:R02IAU:TargetEntranceBottomLinPosition")
 {
 	field(DESC,"TargetEntranceBottomLinPosition")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.LeftBottomLinPositionNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetEntranceBottomLinVelocity")
+record(ao,"SR:R02:ID:R02IAU:TargetEntranceBottomLinVelocity")
 {
 	field(DESC,"TargetEntranceBottomLinVelocity")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.LeftBottomLinVelocityNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetExitBottomLinPosition")
+record(ao,"SR:R02:ID:R02IAU:TargetExitBottomLinPosition")
 {
 	field(DESC,"TargetExitBottomLinPosition")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.DebugMode.RightBottomLinPositionNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetExitBottomLinVelocity")
+record(ao,"SR:R02:ID:R02IAU:TargetExitBottomLinVelocity")
 {
 	field(DESC,"TargetExitBottomLinVelocity")
 	field(DTYP,"opc")
@@ -630,7 +630,7 @@ record(ao,"SR:Rnn:ID:IDName:TargetExitBottomLinVelocity")
 	field(SCAN,"I/O Intr")
 }
 #restart TwinCAT
-record(bo,"SR:Rnn:ID:IDName:RestartTwinCAT")
+record(bo,"SR:R02:ID:R02IAU:RestartTwinCAT")
 {
 	field(DESC,"RestartTwinCAT")
 	field(DTYP,"opc")
@@ -638,77 +638,77 @@ record(bo,"SR:Rnn:ID:IDName:RestartTwinCAT")
 	field(SCAN,"I/O Intr")
 }
 #emergency
-record(bo,"SR:Rnn:ID:IDName:Plc_EmergencyStop")
+record(bo,"SR:R02:ID:R02IAU:Plc_EmergencyStop")
 {
 	field(DESC,"Plc_EmergencyStop")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.Global_Variables.Plc_EmergencyStop")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:IsSSMotionMode")
+record(bo,"SR:R02:ID:R02IAU:IsSSMotionMode")
 {
 	field(DESC,"IsSSMotionMode")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.IsSSMotionMode")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:SS_StepSize")
+record(ao,"SR:R02:ID:R02IAU:SS_StepSize")
 {
 	field(DESC,"SS_StepSize")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.SS_StepSize")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:SS_StepNumber")
+record(ao,"SR:R02:ID:R02IAU:SS_StepNumber")
 {
 	field(DESC,"SS_StepNumber")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.SS_StepNumber")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:SS_StepVelocity")
+record(ao,"SR:R02:ID:R02IAU:SS_StepVelocity")
 {
 	field(DESC,"SS_StepVelocity")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.SS_StepVelocity")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:StepEachTime_ms")
+record(ao,"SR:R02:ID:R02IAU:StepEachTime_ms")
 {
 	field(DESC,"StepEachTime_ms")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.StepEachTime_ms")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:SS_Move")
+record(bo,"SR:R02:ID:R02IAU:SS_Move")
 {
 	field(DESC,"SS_Move")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.UserMode.SS_Move")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:SS_Stop")
+record(bo,"SR:R02:ID:R02IAU:SS_Stop")
 {
 	field(DESC,"SS_Stop")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.UserMode.SS_Stop")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:TaperOrNot")
+record(bo,"SR:R02:ID:R02IAU:TaperOrNot")
 {
 	field(DESC,"TaperOrNot")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.Global_Variables.TaperOrNot")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetUserTaperPosition")
+record(ao,"SR:R02:ID:R02IAU:TargetUserTaperPosition")
 {
 	field(DESC,"TargetUserTaperPosition")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.UserTaperPositionNew")
 	field(SCAN,"I/O Intr")
 }
-record(ao,"SR:Rnn:ID:IDName:TargetUserTaperVelocity")
+record(ao,"SR:R02:ID:R02IAU:TargetUserTaperVelocity")
 {
 	field(DESC,"TargetUserTaperVelocity")
 	field(DTYP,"opc")
@@ -716,56 +716,56 @@ record(ao,"SR:Rnn:ID:IDName:TargetUserTaperVelocity")
 	field(SCAN,"I/O Intr")
 }
 #4aixs move &stop
-record(bo,"SR:Rnn:ID:IDName:btn_EntranceTopLinMove")
+record(bo,"SR:R02:ID:R02IAU:btn_EntranceTopLinMove")
 {
 	field(DESC,"btn_EntranceTopLinMove")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_LeftTopLinMove")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_EntranceTopLinStop")
+record(bo,"SR:R02:ID:R02IAU:btn_EntranceTopLinStop")
 {
 	field(DESC,"btn_EntranceTopLinStop")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_LeftTopLinStop")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_ExitTopLinMove")
+record(bo,"SR:R02:ID:R02IAU:btn_ExitTopLinMove")
 {
 	field(DESC,"btn_ExitTopLinMove")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_RightTopLinMove")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_ExitTopLinStop")
+record(bo,"SR:R02:ID:R02IAU:btn_ExitTopLinStop")
 {
 	field(DESC,"btn_ExitTopLinStop")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_RightTopLinStop")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_EntranceBottomLinMove")
+record(bo,"SR:R02:ID:R02IAU:btn_EntranceBottomLinMove")
 {
 	field(DESC,"btn_EntranceBottomLinMove")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_LeftBottomLinMove")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_EntranceBottomLinStop")
+record(bo,"SR:R02:ID:R02IAU:btn_EntranceBottomLinStop")
 {
 	field(DESC,"btn_EntranceBottomLinStop")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_LeftBottomLinStop")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_ExitBottomLinMove")
+record(bo,"SR:R02:ID:R02IAU:btn_ExitBottomLinMove")
 {
 	field(DESC,"btn_ExitBottomLinMove")
 	field(DTYP,"opc")
 	field(OUT,"1 Plc1.DebugMode.btn_RightBottomLinMove")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:btn_ExitBottomLinStop")
+record(bo,"SR:R02:ID:R02IAU:btn_ExitBottomLinStop")
 {
 	field(DESC,"btn_ExitBottomLinStop")
 	field(DTYP,"opc")
@@ -774,42 +774,42 @@ record(bo,"SR:Rnn:ID:IDName:btn_ExitBottomLinStop")
 }
 
 #globalChainProtection
-record(bo,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_Out1")
+record(bo,"SR:R02:ID:R02IAU:Global_ChainProtection_MPS_Out1")
 {
 	field(DESC,"Global_ChainProtection_MPS_Out1")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.Global_ChainProtection_MPS_Out1")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_Out2")
+record(bo,"SR:R02:ID:R02IAU:Global_ChainProtection_MPS_Out2")
 {
 	field(DESC,"Global_ChainProtection_MPS_Out2")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.Global_ChainProtection_MPS_Out2")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:Global_ChainProtection_EPS_Out1")
+record(bo,"SR:R02:ID:R02IAU:Global_ChainProtection_EPS_Out1")
 {
 	field(DESC,"Global_ChainProtection_EPS_Out1")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.Global_ChainProtection_EPS_Out1")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:Global_ChainProtection_EPS_Out2")
+record(bo,"SR:R02:ID:R02IAU:Global_ChainProtection_EPS_Out2")
 {
 	field(DESC,"Global_ChainProtection_EPS_Out2")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.Global_ChainProtection_EPS_Out2")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:Global_ChainProtection_EPS_ManualOperation")
+record(bo,"SR:R02:ID:R02IAU:Global_ChainProtection_EPS_ManualOperation")
 {
 	field(DESC,"EPS_ManualOperation")
 	field(DTYP,"opc")
 	field(OUT,"2 Plc1.UserMode.Global_ChainProtection_EPS_ManualOperation")
 	field(SCAN,"I/O Intr")
 }
-record(bo,"SR:Rnn:ID:IDName:Global_ChainProtection_MPS_ManualOperation")
+record(bo,"SR:R02:ID:R02IAU:Global_ChainProtection_MPS_ManualOperation")
 {
 	field(DESC,"MPS_ManualOperation")
 	field(DTYP,"opc")

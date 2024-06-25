@@ -1,0 +1,5 @@
+record(ai,"$(P)$(R)"){
+	field(DTYP,"opc")
+	field(INP,"1 $(PLC)")
+	field(SCAN,"I/O Intr")
+}
